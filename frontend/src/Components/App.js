@@ -1,22 +1,28 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import PlayerList from "./Player/PlayerList";
+import PlayerSingle from "./Player/PlayerSingle";
+import PlayerForm from "./Player/PlayerForm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col s12">Menu</div>
+      </div>
+      <div className="row">
+        <div className="col s3">
+          <PlayerList />
+        </div>
+        <div className="col s9">
+          <PlayerSingle />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col s12">
+          <PlayerSingle />
+        </div>
+      </div>
     </div>
   );
 }
