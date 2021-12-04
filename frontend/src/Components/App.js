@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import axios from "axios";
 import "./App.css";
 import PlayerList from "./Player/PlayerList";
 import PlayerSingle from "./Player/PlayerSingle";
 import PlayerForm from "./Player/PlayerForm";
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,9 +38,15 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid grey lighten-3">
         <div className="row">
-          <div className="col s12">Menu</div>
+          <nav>
+            <div className="nav-wrapper  grey lighten-1">
+              <a href="/" className="brand-logo">
+                Soccer Management
+              </a>
+            </div>
+          </nav>
         </div>
         <div className="row">
           <div className="col s3">
@@ -50,7 +56,7 @@ class App extends Component {
             />
           </div>
           <div className="col s9">
-            <PlayerSingle />
+            <PlayerSingle player={this.state.currentPlayer} />
           </div>
         </div>
         <div className="row">
